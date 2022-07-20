@@ -5,9 +5,9 @@ cook_book = {}
 with open('recipe.txt', encoding='utf-8') as file:
     for recipe in file:
         recipes = recipe.strip()
-        ingridients = int(file.readline(2))
+        ingredients = int(file.readline(2))
         recipe_list = []
-        for i in range(ingridients):
+        for i in range(ingredients):
             ingredient_name, quantity, measure = file.readline().strip().split(" | ")
             recipe_list.append({"ingredient_name": ingredient_name, "quantity": quantity, "measure": measure})
         cook_book[recipes] = recipe_list
@@ -32,8 +32,6 @@ def get_shop_list_by_dishes(dishes):
         for j in item:
             for k, v in j.items():
                 print(k, v)
-
-
     print(ingredient_list)
 
 
